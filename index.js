@@ -14,7 +14,8 @@ module.exports = function (options) {
         from: null,
         subject: null,
         html: null,
-        smtp: null
+        smtp: null,
+        attachments: null
     });
     //var transporter = nodemailer.createTransport(
     //    options.transporter || { service: 'sendmail' }
@@ -33,7 +34,8 @@ module.exports = function (options) {
             to: to,
             subject: subject,
             generateTextFromHTML: true, // added
-            html: file.contents.toString()
+            html: file.contents.toString(),
+            attachments: options.attachments
         }, function (error, info) {
             if (error) {
                 console.error(error);

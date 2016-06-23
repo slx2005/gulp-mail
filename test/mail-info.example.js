@@ -12,5 +12,11 @@ module.exports = {
     host: 'smtp.163.com',
     secureConnection: true,
     port: 465
-  }
+  },
+  attachments: [{
+    filePath: __dirname + "/i-love-you.txt",
+  }, {
+    fileName: "i-love-you.jpg",
+    filePath: __dirname + "/i-love-you.jpg",
+  }]
 }
