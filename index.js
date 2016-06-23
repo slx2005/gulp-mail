@@ -42,7 +42,8 @@ module.exports = function (options) {
                 return next();
             }
             gutil.log('Send email', gutil.colors.cyan(subject), 'to',
-                      gutil.colors.red(to));
+                gutil.colors.red(to));
+            transporter.close();
             next();
         });
     });
